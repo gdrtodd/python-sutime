@@ -134,10 +134,10 @@ class SUTime(object):
                 if file_name.endswith(".jar"):
                     jars.append(os.path.join(top, file_name))
                     jar_file_names.append(file_name)
-        if not SUTime._required_jars.issubset(jar_file_names):
-            raise RuntimeError(
-                "Not all necessary Java dependencies have been downloaded!"
-            )
+        # if not SUTime._required_jars.issubset(jar_file_names):
+        #     raise RuntimeError(
+        #         "Not all necessary Java dependencies have been downloaded!"
+        #     )
         return os.pathsep.join(jars)
 
     def parse(self, input_str, reference_date=""):
